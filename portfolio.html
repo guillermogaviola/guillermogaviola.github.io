@@ -9,7 +9,7 @@
 <meta name="keywords" content="">
 
 <!-- Favicons -->
-<link href="assets/img/Black and White Simple Modern Letter G Monrfrfrogram Logo.png" rel="icon">
+<link href="assets/img/faviconforwhitebg__1_-removebg-preview.png" rel="icon">
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -38,10 +38,10 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
         <li><a href="services.html">Services</a></li>
         <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
@@ -395,11 +395,9 @@
 </main>
 
 <footer id="footer" class="footer">
-
   <div class="container">
-    <div class="copyright text-center ">
-      <p>© <span>Copyright</span> <a href="
-        https://linktr.ee/guillermogaviola.s" target="_blank" "px-1 sitename">Guillermo Gaviola</a> <span>All Rights Reserved</span></p>
+    <div class="copyright text-center">
+      <p>&copy; <span id="current-year"></span> <a href="https://linktr.ee/guillermogaviola.s" target="_blank" class="px-1 sitename">Guillermo Gaviola</a>. All Rights Reserved</p>
     </div>
     <div class="social-links d-flex justify-content-center">
       <a href="https://x.com/ggaviola_00" target="_blank"><i class="bi bi-twitter-x"></i></a>
@@ -407,18 +405,17 @@
       <a href="https://www.instagram.com/guillermogaviola.s" target="_blank"><i class="bi bi-instagram"></i></a>
       <a href="https://www.linkedin.com/in/guillermogaviola0/" target="_blank"><i class="bi bi-linkedin"></i></a>
     </div>
-    <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you've purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-      Designed by
-      <!-- <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-      <a href="https://linktr.ee/guillermogaviola.s" target="_blank">Guillermo Gaviola</a>
+    <div class="credits text-center">
+      Designed and Developed by <a href="https://linktr.ee/guillermogaviola.s" target="_blank">Guillermo Gaviola</a>
     </div>
   </div>
-
 </footer>
+
+<!-- Add this script right before the closing </body> tag -->
+<script>
+  // Update copyright year automatically
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 
 <!-- Scroll Top -->
 <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
