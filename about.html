@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Guillermo Gaviola | Portfolio</title>
+<title>Guillermo Gaviola | About</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 
@@ -14,7 +14,7 @@
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 
 <!-- Vendor CSS Files -->
 <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,22 +25,735 @@
 
 <!-- Main CSS File -->
 <link href="assets/css/main.css" rel="stylesheet">
+
+<style>
+  :root {
+    --ink:          #091057;
+    --ink-soft:     #024CAA;
+    --paper:        #DBD3D3;
+    --paper-warm:   #c8c0c0;
+    --accent:       #EC8305;
+    --accent-alt:   #f5a030;
+    --gold:         #EC8305;
+    --gold-light:   #f5a030;
+    --muted:        #5a6285;
+    --line:         rgba(9,16,87,0.13);
+    --font-display: 'Syne', sans-serif;
+    --font-body:    'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.25;
+  }
+
+  /* ── Header ── */
+  #header {
+    border-bottom: 1px solid var(--line);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(12px);
+    background: rgba(219,211,211,0.93);
+  }
+
+  .header-container { padding: 0 2.5rem; height: 68px; }
+
+  .logo .sitename {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+
+  .navmenu ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .navmenu ul li a {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s;
+  }
+
+  .navmenu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0;
+    width: 0; height: 1.5px;
+    background: var(--accent);
+    transition: width 0.25s ease;
+  }
+
+  .navmenu ul li a:hover,
+  .navmenu ul li a.active { color: var(--ink); }
+  .navmenu ul li a:hover::after,
+  .navmenu ul li a.active::after { width: 100%; }
+
+  .header-social-links { display: flex; gap: 1rem; align-items: center; }
+  .header-social-links a {
+    color: var(--muted);
+    font-size: 0.95rem;
+    transition: color 0.2s, transform 0.2s;
+    display: flex;
+  }
+  .header-social-links a:hover { color: var(--accent); transform: translateY(-2px); }
+
+  /* ── Page Banner ── */
+  .page-banner {
+    background: var(--ink);
+    padding: 5rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-banner::before {
+    content: 'About';
+    position: absolute;
+    top: 50%;
+    right: -2%;
+    transform: translateY(-50%);
+    font-family: var(--font-display);
+    font-size: clamp(8rem, 18vw, 16rem);
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(219,211,211,0.09);
+    line-height: 1;
+    pointer-events: none;
+    letter-spacing: -0.04em;
+  }
+
+  .page-banner .banner-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-alt);
+    margin-bottom: 1rem;
+  }
+
+  .page-banner .banner-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px; height: 1.5px;
+    background: var(--accent-alt);
+  }
+
+  .page-banner h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 800;
+    color: var(--paper);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin: 0;
+  }
+
+  .page-banner h1 span { color: var(--accent-alt); }
+
+  /* ── Sticky side nav ── */
+  .about-page { padding: 6rem 0; }
+
+  .side-nav {
+    position: sticky;
+    top: 88px;
+    padding-right: 2rem;
+  }
+
+  .side-nav-label {
+    font-family: var(--font-display);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .side-nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 0.6rem 0;
+    border-left: 2px solid transparent;
+    padding-left: 0.75rem;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .side-nav a:hover,
+  .side-nav a.active {
+    color: var(--ink);
+    border-left-color: var(--accent);
+  }
+
+  .side-nav a i { font-size: 0.75rem; color: var(--accent); }
+
+  /* ── Section blocks ── */
+  .about-section {
+    margin-bottom: 5rem;
+    opacity: 0;
+    animation: fadeSlideUp 0.7s ease forwards;
+  }
+
+  .about-section:nth-child(1) { animation-delay: 0.1s; }
+  .about-section:nth-child(2) { animation-delay: 0.2s; }
+  .about-section:nth-child(3) { animation-delay: 0.3s; }
+  .about-section:nth-child(4) { animation-delay: 0.4s; }
+  .about-section:nth-child(5) { animation-delay: 0.5s; }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 28px; height: 1.5px;
+    background: var(--accent);
+  }
+
+  .section-heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 1.75rem;
+    line-height: 1.1;
+  }
+
+  /* ── 1. Personal Background ── */
+  .profile-block {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .profile-img-wrap {
+    position: relative;
+  }
+
+  .profile-img-wrap::before {
+    content: '';
+    position: absolute;
+    top: -10px; left: -10px;
+    right: 10px; bottom: 10px;
+    border: 1.5px solid var(--accent);
+    z-index: 0;
+  }
+
+  .profile-img-wrap::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; right: -8px;
+    width: 60px; height: 60px;
+    background-image: radial-gradient(circle, var(--ink) 1.5px, transparent 1.5px);
+    background-size: 8px 8px;
+    z-index: 3;
+  }
+
+  .profile-img-wrap img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: top;
+    position: relative;
+    z-index: 1;
+    filter: grayscale(15%);
+    transition: filter 0.4s;
+  }
+
+  .profile-img-wrap:hover img { filter: grayscale(0%); }
+
+  .profile-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--line);
+    margin-bottom: 1.25rem;
+  }
+
+  .pi-item {
+    padding: 0.9rem 1.1rem;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    transition: background 0.2s;
+  }
+
+  .pi-item:nth-child(even) { border-right: none; }
+  .pi-item:nth-last-child(-n+2) { border-bottom: none; }
+  .pi-item:hover { background: var(--paper-warm); }
+
+  .pi-label {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+  }
+
+  .pi-value {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .currently-card {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .currently-card i {
+    font-size: 1.2rem;
+    color: var(--accent-alt);
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+  }
+
+  .cc-label {
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(219,211,211,0.45);
+    margin-bottom: 0.25rem;
+  }
+
+  .cc-value {
+    font-size: 0.9rem;
+    color: var(--paper);
+    line-height: 1.5;
+  }
+
+  .cc-value strong { color: var(--accent-alt); font-weight: 600; }
+
+  /* ── 2. Education ── */
+  .edu-card {
+    border: 1px solid var(--line);
+    padding: 1.75rem 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .edu-card:hover { border-color: var(--accent); background: var(--paper-warm); }
+
+  .edu-icon {
+    width: 48px; height: 48px;
+    background: var(--accent);
+    color: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .edu-degree {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.01em;
+  }
+
+  .edu-school {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .edu-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .edu-tag {
+    font-family: var(--font-display);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.65rem;
+    border: 1px solid var(--line);
+    color: var(--muted);
+  }
+
+  .edu-tag.accent { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+
+  /* ── 3. Work Experience ── */
+  .work-timeline { position: relative; }
+
+  .work-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px; bottom: 0;
+    width: 1px;
+    background: var(--line);
+  }
+
+  .wt-item {
+    padding-left: 2rem;
+    padding-bottom: 2.5rem;
+    position: relative;
+  }
+
+  .wt-item:last-child { padding-bottom: 0; }
+
+  .wt-dot {
+    position: absolute;
+    left: -5px; top: 6px;
+    width: 11px; height: 11px;
+    background: var(--accent);
+    transform: rotate(45deg);
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .wt-item:hover .wt-dot {
+    background: var(--ink);
+    transform: rotate(45deg) scale(1.3);
+  }
+
+  .wt-period {
+    font-family: var(--font-display);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--accent);
+    padding: 0.2rem 0.55rem;
+    display: inline-block;
+    margin-bottom: 0.6rem;
+  }
+
+  .wt-role {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.2rem;
+  }
+
+  .wt-org {
+    font-size: 0.83rem;
+    color: var(--muted);
+    margin-bottom: 0.7rem;
+  }
+
+  .wt-duties {
+    list-style: none;
+    padding: 0;
+  }
+
+  .wt-duties li {
+    font-size: 0.85rem;
+    color: var(--muted);
+    padding: 0.25rem 0 0.25rem 1rem;
+    border-left: 2px solid var(--line);
+    margin-bottom: 0.25rem;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .wt-item:hover .wt-duties li {
+    border-left-color: var(--accent);
+    color: var(--ink);
+  }
+
+  /* ── 4. Technical Skills ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .skill-group {
+    border: 1px solid var(--line);
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .skill-group:hover { border-color: var(--accent); }
+
+  .skill-group-header {
+    background: var(--ink);
+    padding: 0.9rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .skill-group-header i { color: var(--accent-alt); font-size: 1rem; }
+
+  .skill-group-header span {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--paper);
+  }
+
+  .skill-group-body { padding: 1.25rem; }
+
+  .skill-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    font-family: var(--font-display);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--line);
+    color: var(--ink);
+    background: var(--paper-warm);
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    cursor: default;
+  }
+
+  .skill-tag:hover {
+    background: var(--accent);
+    color: var(--paper);
+    border-color: var(--accent);
+  }
+
+  /* ── 5. Soft Skills ── */
+  .soft-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .soft-card {
+    border: 1px solid var(--line);
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    transition: border-color 0.25s, transform 0.25s, background 0.25s;
+  }
+
+  .soft-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    background: var(--paper-warm);
+  }
+
+  .soft-card-icon {
+    width: 52px; height: 52px;
+    margin: 0 auto 1rem;
+    background: var(--paper-warm);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+    color: var(--accent);
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .soft-card:hover .soft-card-icon {
+    background: var(--accent);
+    color: var(--paper);
+  }
+
+  .soft-card-title {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .soft-card-desc {
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  /* ── Section separator ── */
+  .sep {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 4rem 0;
+  }
+
+  .sep::before, .sep::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+
+  .sep-diamond {
+    width: 8px; height: 8px;
+    background: var(--accent);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  /* ── Footer ── */
+  #footer {
+    background: var(--ink);
+    color: rgba(219,211,211,0.60);
+    padding: 2.5rem 0;
+    font-size: 0.82rem;
+  }
+
+  #footer .sitename, #footer a {
+    color: var(--paper);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  #footer a:hover { color: var(--accent-alt); }
+
+  #footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  #footer .social-links a {
+    color: rgba(219,211,211,0.55);
+    font-size: 1rem;
+    transition: color 0.2s, transform 0.2s;
+  }
+
+  #footer .social-links a:hover { color: var(--accent-alt); transform: translateY(-3px); }
+  #footer .credits { color: rgba(219,211,211,0.35); margin-top: 0.5rem; }
+
+  #scroll-top {
+    background: var(--accent);
+    color: var(--paper);
+    width: 42px; height: 42px;
+    border-radius: 0;
+    bottom: 2rem; right: 2rem;
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  #scroll-top:hover { transform: translateY(-3px); box-shadow: 4px 7px 0 var(--ink); }
+
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 1199px) {
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    .soft-skills-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (max-width: 991px) {
+    .side-nav { display: none; }
+    .profile-block { grid-template-columns: 1fr; }
+    .profile-img-wrap { max-width: 260px; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .soft-skills-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 576px) {
+    .header-container { padding: 0 1.25rem; }
+    .about-page { padding: 4rem 0; }
+    .profile-info-grid { grid-template-columns: 1fr; }
+    .pi-item { border-right: none !important; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .soft-skills-grid { grid-template-columns: repeat(2, 1fr); }
+    .edu-card { flex-direction: column; }
+  }
+</style>
 </head>
 
 <body class="index-page">
 
 <header id="header" class="header d-flex align-items-center sticky-top">
   <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
     <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
       <h1 class="sitename">Guillermo Gaviola</h1>
     </a>
 
     <nav id="navmenu" class="navmenu">
       <ul>
+        
+        
+        
+        
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
-        <li><a href="resume.html">Resume</a></li>
+        <li><a href="credentials.html">Credentials</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -52,96 +765,293 @@
       <a href="https://www.instagram.com/mnbvcxz00frw" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
       <a href="https://www.linkedin.com/in/guillermogaviola0/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
     </div>
-
   </div>
 </header>
 
 <main class="main">
 
-  <!-- About Section -->
-  <section id="about" class="about section light-background">
-    <div class="container section-title" data-aos="fade-up">
-      <h2>About</h2>
-      <div class="title-shape">
-        <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-          <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
-        </svg>
-      </div>
+  <!-- Page Banner -->
+  <div class="page-banner">
+    <div class="container">
+      <div class="banner-eyebrow">Portfolio</div>
+      <h1>About <span>Me</span></h1>
     </div>
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
+  </div>
 
-      <div class="row align-items-center">
-        <div class="col-lg-6 position-relative" data-aos="fade-right" data-aos-delay="200">
-          <div class="about-image">
-            <img src="assets/img/5S2A6202.JPG" alt="Profile Image" class="img-fluid rounded-4">
-          </div>
+  <!-- About Page -->
+  <div class="about-page">
+    <div class="container">
+      <div class="row">
+
+        <!-- Sticky Side Nav (desktop only) -->
+        <div class="col-xl-2 col-lg-3 d-none d-lg-block">
+          <nav class="side-nav">
+            <div class="side-nav-label">On This Page</div>
+            <a href="#background"><i class="bi bi-person"></i> Background</a>
+            <a href="#education"><i class="bi bi-mortarboard"></i> Education</a>
+            <a href="#experience"><i class="bi bi-briefcase"></i> Experience</a>
+            <a href="#technical"><i class="bi bi-code-slash"></i> Tech Skills</a>
+            <a href="#soft"><i class="bi bi-stars"></i> Soft Skills</a>
+          </nav>
         </div>
-        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-          <div class="about-content">
-            <span class="subtitle">About Me</span>
-            <div class="personal-info">
-              <div class="row g-4">
-                <div class="col-6">
-                  <div class="info-item">
-                    <span class="label">Name</span>
-                    <span class="value">Guillermo Gaviola</span>
+
+        <!-- Main Content -->
+        <div class="col-xl-10 col-lg-9">
+
+          <!-- ── 1. Personal Background ── -->
+          <div class="about-section" id="background">
+            <div class="section-label">01</div>
+            <h2 class="section-heading">Personal Background</h2>
+
+            <div class="profile-block">
+              <div class="profile-img-wrap">
+                <img src="assets/img/profp (2).jpg" alt="Guillermo Gaviola">
+              </div>
+              <div>
+                <div class="profile-info-grid">
+                  <div class="pi-item">
+                    <span class="pi-label">Full Name</span>
+                    <span class="pi-value">Guillermo Gaviola</span>
+                  </div>
+                  <div class="pi-item">
+                    <span class="pi-label">Age</span>
+                    <span class="pi-value">26 years old</span>
+                  </div>
+                  <div class="pi-item">
+                    <span class="pi-label">Nationality</span>
+                    <span class="pi-value">Filipino</span>
+                  </div>
+                  <div class="pi-item">
+                    <span class="pi-label">Phone</span>
+                    <span class="pi-value">+63 946 101 5690</span>
+                  </div>
+                  <div class="pi-item">
+                    <span class="pi-label">Location</span>
+                    <span class="pi-value">Bontoc, Southern Leyte</span>
+                  </div>
+                  <div class="pi-item">
+                    <span class="pi-label">Email</span>
+                    <span class="pi-value" style="font-size:0.78rem;">guillermosumamponggaviola@proton.me</span>
                   </div>
                 </div>
 
-                <div class="col-6">
-                  <div class="info-item">
-                    <span class="label">Phone</span>
-                    <span class="value">+63 946 101 5690</span>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="info-item">
-                    <span class="label">Age</span>
-                    <span class="value">25</span>
-                  </div>
-                </div>
-
-                <!-- <div class="col-6">
-                  <div class="info-item">
-                    <span class="label">Email</span>
-                    <span class="value">guillermosumamponggaviola@proton.me</span>
-                  </div>
-                </div> -->
-
-                <!-- <div class="col-6">
-                  <div class="info-item">
-                    <span class="label">Occupation</span>
-                    <span class="value">Web Developer</span>
-                  </div>
-                </div> -->
-
-                <div class="col-6">
-                  <div class="info-item">
-                    <span class="label">Nationality</span>
-                    <span class="value">Filipino</span>
+                <div class="currently-card">
+                  <i class="bi bi-briefcase-fill"></i>
+                  <div>
+                    <div class="cc-label">Currently</div>
+                    <div class="cc-value">
+                      Administrative Aide at<br>
+                      <strong>Municipality of Bontoc, Southern Leyte</strong>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- <div class="signature mt-4">
-              <div class="signature-image">
-                <img src="assets/img/misc/No BG.png" alt="" class="img-fluid">
+          <div class="sep"><div class="sep-diamond"></div></div>
+
+          <!-- ── 2. Education ── -->
+          <div class="about-section" id="education">
+            <div class="section-label">02</div>
+            <h2 class="section-heading">Education</h2>
+
+            <div class="edu-card">
+              <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
+              <div>
+                <div class="edu-degree">Bachelor of Science in Information Technology</div>
+                <div class="edu-school">Southern Leyte State University – Bontoc Campus</div>
+                <div class="edu-meta">
+                  <span class="edu-tag accent">Class of 2024</span>
+                  <span class="edu-tag">2020 – 2024</span>
+                  <span class="edu-tag">Specialization: Programming</span>
+                </div>
               </div>
-              <div class="signature-info">
-                <h4>Guillermo Gaviola</h4>
-                <p>Class of 2024</p>
+            </div>
+          </div>
+
+          <div class="sep"><div class="sep-diamond"></div></div>
+
+          <!-- ── 3. Work Experience ── -->
+          <div class="about-section" id="experience">
+            <div class="section-label">03</div>
+            <h2 class="section-heading">Work Experience</h2>
+
+            <div class="work-timeline">
+
+              <div class="wt-item">
+                <div class="wt-dot"></div>
+                <span class="wt-period">2025 – Present</span>
+                <div class="wt-role">Administrative Aide</div>
+                <div class="wt-org">Municipality of Bontoc, Southern Leyte</div>
+                <ul class="wt-duties">
+                  <li>Digitized maps for FLUP</li>
+                  <li>Digitized maps for FMRNP</li>
+                </ul>
               </div>
+
+              <div class="wt-item">
+                <div class="wt-dot"></div>
+                <span class="wt-period">2025</span>
+                <div class="wt-role">Congressional District Support Staff (CDSS)</div>
+                <div class="wt-org">Sogod, Southern Leyte, Second District</div>
+                <ul class="wt-duties">
+                  <li>Provided office support</li>
+                </ul>
+              </div>
+
+              <div class="wt-item">
+                <div class="wt-dot"></div>
+                <span class="wt-period">2025</span>
+                <div class="wt-role">DepEd Supervisor Official Technical Support Staff (DESO-TSS)</div>
+                <div class="wt-org">Municipality of Bontoc</div>
+                <ul class="wt-duties">
+                  <li>Reported to assigned polling place on Election Day and at Final Testing and Sealing (FTS)</li>
+                  <li>Verified that VCMs are operating properly, inventoried and sealed machines, and reported concerns</li>
+                </ul>
+              </div>
+
+              <div class="wt-item">
+                <div class="wt-dot"></div>
+                <span class="wt-period">2024</span>
+                <div class="wt-role">On-The-Job Training (OJT)</div>
+                <div class="wt-org">Municipality of Bontoc</div>
+                <ul class="wt-duties">
+                  <li>Observed experienced co-workers and performed duties under guidance</li>
+                  <li>Participated in company learning and development programs</li>
+                </ul>
+              </div>
+
+              <div class="wt-item">
+                <div class="wt-dot"></div>
+                <span class="wt-period">2023</span>
+                <div class="wt-role">Barangay Encoder</div>
+                <div class="wt-org">Sto. Niño, Bontoc, Southern Leyte</div>
+                <ul class="wt-duties">
+                  <li>Assisted barangay operations and performed data encoding duties</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="sep"><div class="sep-diamond"></div></div>
+
+          <!-- ── 4. Technical Skills ── -->
+          <div class="about-section" id="technical">
+            <div class="section-label">04</div>
+            <h2 class="section-heading">Technical Skills</h2>
+
+            <div class="skills-grid">
+
+              <!-- Programming Languages -->
+              <div class="skill-group">
+                <div class="skill-group-header">
+                  <i class="bi bi-braces"></i>
+                  <span>Programming Languages</span>
+                </div>
+                <div class="skill-group-body">
+                <!--   <div class="skill-tag-list">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">SQL</span>
+                  </div> -->
+                </div>
+              </div>
+
+              <!-- Frameworks & Libraries -->
+              <div class="skill-group">
+                <div class="skill-group-header">
+                  <i class="bi bi-layers"></i>
+                  <span>Frameworks &amp; Libraries</span>
+                </div>
+                <div class="skill-group-body">
+                 <!--  <div class="skill-tag-list">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">Express</span>
+                    <span class="skill-tag">jQuery</span>
+                  </div> -->
+                </div>
+              </div>
+
+              <!-- Tools & Technologies -->
+              <div class="skill-group">
+                <div class="skill-group-header">
+                  <i class="bi bi-tools"></i>
+                  <span>Tools &amp; Technologies</span>
+                </div>
+                <div class="skill-group-body">
+              <!--     <div class="skill-tag-list">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">Canva</span>
+                  </div> -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="sep"><div class="sep-diamond"></div></div>
+
+          <!-- ── 5. Soft Skills ── -->
+          <div class="about-section" id="soft">
+            <div class="section-label">05</div>
+            <h2 class="section-heading">Soft Skills</h2>
+<!-- 
+            <div class="soft-skills-grid">
+
+              <div class="soft-card">
+                <div class="soft-card-icon"><i class="bi bi-chat-dots"></i></div>
+                <div class="soft-card-title">Communication</div>
+                <div class="soft-card-desc">Clear and effective written and verbal communication across teams and clients.</div>
+              </div>
+
+              <div class="soft-card">
+                <div class="soft-card-icon"><i class="bi bi-lightbulb"></i></div>
+                <div class="soft-card-title">Problem-Solving</div>
+                <div class="soft-card-desc">Analytical thinking to identify issues quickly and implement practical solutions.</div>
+              </div>
+
+              <div class="soft-card">
+                <div class="soft-card-icon"><i class="bi bi-people"></i></div>
+                <div class="soft-card-title">Teamwork</div>
+                <div class="soft-card-desc">Collaborative approach that values diverse perspectives to achieve shared goals.</div>
+              </div>
+
+              <div class="soft-card">
+                <div class="soft-card-icon"><i class="bi bi-clock"></i></div>
+                <div class="soft-card-title">Time Management</div>
+                <div class="soft-card-desc">Prioritizing tasks effectively to meet deadlines without sacrificing quality.</div>
+              </div>
+
+              <div class="soft-card">
+                <div class="soft-card-icon"><i class="bi bi-arrow-repeat"></i></div>
+                <div class="soft-card-title">Adaptability</div>
+                <div class="soft-card-desc">Quick to adjust to new environments, tools, and changing priorities.</div>
+              </div>
+
+              <div class="soft-card">
+                <div class="soft-card-icon"><i class="bi bi-eye"></i></div>
+                <div class="soft-card-title">Attention to Detail</div>
+                <div class="soft-card-desc">Careful and thorough in reviewing work to ensure accuracy and quality output.</div>
+              </div>
+
             </div> -->
           </div>
-        </div>
-      </div>
 
-    </div>
-
-  </section>  
-    </section><!-- /Skills Section -->
+        </div><!-- /col -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </div>
 
 </main>
 
@@ -162,10 +1072,24 @@
   </div>
 </footer>
 
-<!-- Add this script right before the closing </body> tag -->
 <script>
-  // Update copyright year automatically
   document.getElementById('current-year').textContent = new Date().getFullYear();
+
+  // Sticky side nav active state on scroll
+  const sections = document.querySelectorAll('.about-section[id]');
+  const navLinks = document.querySelectorAll('.side-nav a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  sections.forEach(s => observer.observe(s));
 </script>
 
 <!-- Scroll Top -->
@@ -180,10 +1104,7 @@
 <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-<!-- Main JS File -->
 <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

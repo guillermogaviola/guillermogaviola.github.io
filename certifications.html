@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Guillermo Gaviola | Certifications</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<!-- Favicons -->
+<link href="assets/img/logo-removebg-preview.png" rel="icon">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<!-- Main CSS File -->
+<link href="assets/css/main.css" rel="stylesheet">
+
+<style>
+  :root {
+    --ink:          #091057;
+    --ink-soft:     #024CAA;
+    --paper:        #DBD3D3;
+    --paper-warm:   #c8c0c0;
+    --accent:       #EC8305;
+    --accent-alt:   #f5a030;
+    --gold:         #EC8305;
+    --gold-light:   #f5a030;
+    --muted:        #5a6285;
+    --line:         rgba(9,16,87,0.13);
+    --font-display: 'Syne', sans-serif;
+    --font-body:    'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 9999; opacity: 0.25;
+  }
+
+  /* ── Header ── */
+  #header {
+    border-bottom: 1px solid var(--line); padding: 0;
+    position: sticky; top: 0; z-index: 999;
+    backdrop-filter: blur(12px);
+    background: rgba(219,211,211,0.93);
+  }
+
+  .header-container { padding: 0 2.5rem; height: 68px; }
+
+  .logo .sitename {
+    font-family: var(--font-display); font-size: 1.15rem;
+    font-weight: 800; letter-spacing: -0.02em;
+    color: var(--ink); text-transform: uppercase;
+  }
+
+  .navmenu ul { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
+
+  .navmenu ul li a {
+    font-family: var(--font-display); font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+    text-decoration: none; position: relative; transition: color 0.2s;
+  }
+
+  .navmenu ul li a::after {
+    content: ''; position: absolute; bottom: -3px; left: 0;
+    width: 0; height: 1.5px; background: var(--accent); transition: width 0.25s ease;
+  }
+
+  .navmenu ul li a:hover, .navmenu ul li a.active { color: var(--ink); }
+  .navmenu ul li a:hover::after, .navmenu ul li a.active::after { width: 100%; }
+
+  .header-social-links { display: flex; gap: 1rem; align-items: center; }
+  .header-social-links a { color: var(--muted); font-size: 0.95rem; transition: color 0.2s, transform 0.2s; display: flex; }
+  .header-social-links a:hover { color: var(--accent); transform: translateY(-2px); }
+
+  /* ── Page Banner ── */
+  .page-banner {
+    background: var(--ink); padding: 5rem 0 4rem;
+    position: relative; overflow: hidden;
+  }
+
+  .page-banner::before {
+    content: 'Certifications';
+    position: absolute; top: 50%; right: -1%;
+    transform: translateY(-50%);
+    font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 800; color: transparent;
+    -webkit-text-stroke: 1px rgba(219,211,211,0.08);
+    line-height: 1; pointer-events: none;
+    letter-spacing: -0.03em; white-space: nowrap;
+  }
+
+  .page-banner::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(to right, var(--gold), var(--gold-light), transparent);
+  }
+
+  .banner-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    font-family: var(--font-display); font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 1rem;
+  }
+
+  .banner-eyebrow::before {
+    content: ''; display: inline-block; width: 32px; height: 1.5px; background: var(--gold-light);
+  }
+
+  .page-banner h1 {
+    font-family: var(--font-display); font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 800; color: var(--paper); letter-spacing: -0.03em;
+    line-height: 1.05; margin: 0 0 0.6rem;
+  }
+
+  .page-banner h1 span { color: var(--gold-light); }
+  .page-banner .banner-sub { font-size: 0.88rem; color: rgba(219,211,211,0.55); font-weight: 300; }
+
+  /* ── Drive Banner ── */
+  .drive-banner {
+    background: linear-gradient(135deg, #EC8305 0%, #c86804 100%);
+    opacity: 0; animation: fadeSlideUp 0.6s ease 0.05s forwards;
+  }
+
+  .drive-banner-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1.5rem; padding: 1.5rem 0; flex-wrap: wrap;
+  }
+
+  .drive-left { display: flex; align-items: center; gap: 1.25rem; }
+
+  .drive-icon {
+    width: 48px; height: 48px; background: rgba(219,211,211,0.20);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; color: var(--paper); flex-shrink: 0;
+  }
+
+  .drive-label {
+    font-family: var(--font-display); font-size: 0.6rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(219,211,211,0.72); margin-bottom: 0.2rem;
+  }
+
+  .drive-left h3 {
+    font-family: var(--font-display); font-size: 1rem; font-weight: 800;
+    color: var(--paper); letter-spacing: -0.01em; margin: 0;
+  }
+
+  .drive-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: var(--font-display); font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none;
+    padding: 0.75rem 1.5rem; background: var(--paper); color: var(--gold);
+    border: 1.5px solid var(--paper); transition: all 0.2s ease; white-space: nowrap;
+  }
+
+  .drive-btn:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+  /* ── Main Section ── */
+  .cert-section { padding: 5rem 0 7rem; }
+
+  /* ── Stats Row ── */
+  .stats-row {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--line); margin-bottom: 3.5rem;
+    opacity: 0; animation: fadeSlideUp 0.6s ease 0.15s forwards;
+  }
+
+  .stat-cell {
+    padding: 1.75rem 2rem; border-right: 1px solid var(--line);
+    transition: background 0.2s; position: relative; overflow: hidden;
+  }
+
+  .stat-cell:last-child { border-right: none; }
+  .stat-cell:hover { background: var(--paper-warm); }
+
+  .stat-cell::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 3px; height: 0; background: var(--gold); transition: height 0.3s ease;
+  }
+
+  .stat-cell:hover::before { height: 100%; }
+
+  .stat-number {
+    display: block; font-family: var(--font-display); font-size: 2.6rem;
+    font-weight: 800; color: var(--ink); letter-spacing: -0.05em;
+    line-height: 1; margin-bottom: 0.3rem;
+  }
+
+  .stat-label {
+    font-family: var(--font-display); font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
+  }
+
+  /* ── Filter Bar ── */
+  .filter-bar {
+    display: flex; align-items: center; gap: 0;
+    border: 1px solid var(--line); margin-bottom: 3rem;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    opacity: 0; animation: fadeSlideUp 0.6s ease 0.2s forwards;
+  }
+
+  .filter-btn {
+    font-family: var(--font-display); font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase; padding: 0.85rem 1.5rem;
+    border: none; background: transparent; color: var(--muted);
+    cursor: pointer; white-space: nowrap; border-right: 1px solid var(--line);
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .filter-btn:last-child { border-right: none; }
+  .filter-btn:hover { background: var(--paper-warm); color: var(--ink); }
+  .filter-btn.active { background: var(--ink); color: var(--paper); }
+
+  /* ── Block Header ── */
+  .block-header {
+    display: flex; align-items: center; gap: 1.1rem;
+    margin-bottom: 2rem; opacity: 0; animation: fadeSlideUp 0.6s ease 0.25s forwards;
+  }
+
+  .block-icon {
+    width: 46px; height: 46px; background: var(--gold);
+    color: var(--paper); display: flex; align-items: center;
+    justify-content: center; font-size: 1.1rem; flex-shrink: 0;
+  }
+
+  .block-eyebrow {
+    font-family: var(--font-display); font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 0.15rem;
+  }
+
+  .block-header h2 {
+    font-family: var(--font-display); font-size: 1.55rem;
+    font-weight: 800; letter-spacing: -0.03em; color: var(--ink); line-height: 1; margin: 0;
+  }
+
+  /* ── Cert Grid ── */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem; margin-bottom: 4rem;
+  }
+
+  /* ── Certificate Card ── */
+  .cert-card {
+    display: flex; flex-direction: column; text-decoration: none;
+    color: inherit; background: var(--paper);
+    border: 1px solid var(--line);
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    position: relative; overflow: hidden;
+    opacity: 0; animation: fadeSlideUp 0.6s ease forwards;
+  }
+
+  .cert-card:nth-child(1) { animation-delay: 0.30s; }
+  .cert-card:nth-child(2) { animation-delay: 0.38s; }
+  .cert-card:nth-child(3) { animation-delay: 0.46s; }
+  .cert-card:nth-child(4) { animation-delay: 0.54s; }
+  .cert-card:nth-child(5) { animation-delay: 0.62s; }
+  .cert-card:nth-child(6) { animation-delay: 0.70s; }
+  .cert-card:nth-child(7) { animation-delay: 0.78s; }
+  .cert-card:nth-child(8) { animation-delay: 0.86s; }
+
+  .cert-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(184,146,42,0.12);
+  }
+
+  .cert-card-bar {
+    height: 3px;
+    background: linear-gradient(to right, var(--gold), var(--gold-light));
+    transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease;
+  }
+
+  .cert-card:hover .cert-card-bar { transform: scaleX(1); }
+
+  /* Preview */
+  .cert-preview {
+    height: 180px; background: var(--ink);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .cert-preview-bg {
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(0deg, rgba(219,211,211,0.03) 0px, rgba(219,211,211,0.03) 1px, transparent 1px, transparent 28px),
+      repeating-linear-gradient(90deg, rgba(219,211,211,0.03) 0px, rgba(219,211,211,0.03) 1px, transparent 1px, transparent 28px);
+  }
+
+  .cert-preview-seal {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+  }
+
+  .seal-ring {
+    width: 64px; height: 64px; border-radius: 50%;
+    border: 2px solid rgba(236,131,5,0.4);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; transition: border-color 0.3s;
+  }
+
+  .cert-card:hover .seal-ring { border-color: var(--gold-light); }
+
+  .seal-ring::before {
+    content: ''; position: absolute; inset: 5px;
+    border-radius: 50%; border: 1px solid rgba(236,131,5,0.25);
+  }
+
+  .seal-ring i { font-size: 1.6rem; color: rgba(236,131,5,0.5); transition: color 0.3s; }
+  .cert-card:hover .seal-ring i { color: var(--gold-light); }
+
+  .seal-label {
+    font-family: var(--font-display); font-size: 0.55rem; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(236,131,5,0.5); transition: color 0.3s;
+  }
+
+  .cert-card:hover .seal-label { color: var(--gold-light); }
+
+  /* Ribbon */
+  .cert-ribbon {
+    position: absolute; top: 14px; right: -28px; width: 110px;
+    background: var(--gold); color: var(--paper);
+    font-family: var(--font-display); font-size: 0.55rem; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 0.3rem 0; text-align: center;
+    transform: rotate(35deg); z-index: 3;
+  }
+
+  .cert-ribbon.gov   { background: #2a5a8a; }
+  .cert-ribbon.ict   { background: var(--accent); }
+  .cert-ribbon.civil { background: #2a7a4b; }
+  .cert-ribbon.civic { background: #5a3a7a; }
+
+  /* Card body */
+  .cert-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+
+  .cert-title {
+    font-family: var(--font-display); font-size: 0.95rem; font-weight: 800;
+    color: var(--ink); line-height: 1.3; letter-spacing: -0.01em;
+    margin-bottom: 0.4rem; transition: color 0.2s;
+  }
+
+  .cert-card:hover .cert-title { color: var(--gold); }
+
+  .cert-issuer { font-size: 0.8rem; color: var(--muted); flex: 1; margin-bottom: 1.1rem; }
+
+  .cert-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 0.9rem; border-top: 1px solid var(--line); gap: 0.5rem;
+  }
+
+  .cert-date {
+    display: flex; align-items: center; gap: 0.35rem;
+    font-family: var(--font-display); font-size: 0.62rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+  }
+
+  .cert-date i { color: var(--gold); }
+
+  .cert-open-btn {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    font-family: var(--font-display); font-size: 0.6rem; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--paper); background: var(--gold); padding: 0.3rem 0.75rem;
+    transition: background 0.2s;
+  }
+
+  .cert-card:hover .cert-open-btn { background: var(--ink); }
+
+  /* Placeholder */
+  .cert-placeholder {
+    border: 1px dashed rgba(9,16,87,0.14);
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; padding: 3rem 1.5rem; text-align: center;
+    min-height: 200px; opacity: 0; animation: fadeSlideUp 0.6s ease 0.9s forwards;
+  }
+
+  .cert-placeholder i { font-size: 2.2rem; color: rgba(236,131,5,0.25); margin-bottom: 0.75rem; }
+  .cert-placeholder strong {
+    font-family: var(--font-display); font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+    display: block; margin-bottom: 0.4rem;
+  }
+  .cert-placeholder p { font-size: 0.78rem; color: var(--muted); line-height: 1.6; }
+
+  /* ── How-to Strip ── */
+  .howto-strip {
+    background: var(--ink); padding: 2.5rem;
+    opacity: 0; animation: fadeSlideUp 0.6s ease 0.3s forwards;
+  }
+
+  .howto-header {
+    display: flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 1.75rem; padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(219,211,211,0.10);
+  }
+
+  .howto-header i { color: var(--gold-light); font-size: 1rem; }
+
+  .howto-header span {
+    font-family: var(--font-display); font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(219,211,211,0.60);
+  }
+
+  .howto-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+  .howto-step { display: flex; flex-direction: column; gap: 0.5rem; }
+
+  .howto-num {
+    font-family: var(--font-display); font-size: 1.8rem; font-weight: 800;
+    color: var(--gold); letter-spacing: -0.04em; line-height: 1;
+  }
+
+  .howto-title {
+    font-family: var(--font-display); font-size: 0.72rem; font-weight: 700;
+    color: var(--paper); letter-spacing: 0.02em;
+  }
+
+  .howto-desc { font-size: 0.78rem; color: rgba(219,211,211,0.55); line-height: 1.6; }
+  .howto-desc code { color: var(--gold-light); font-family: monospace; font-size: 0.76rem; }
+
+  /* Sep */
+  .section-sep {
+    display: flex; align-items: center; gap: 1.5rem;
+    margin: 4rem 0 3rem; opacity: 0; animation: fadeSlideUp 0.5s ease 0.2s forwards;
+  }
+
+  .section-sep::before, .section-sep::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+  .sep-diamond { width: 8px; height: 8px; background: var(--gold); transform: rotate(45deg); flex-shrink: 0; }
+
+  /* ── Footer ── */
+  #footer { background: var(--ink); color: rgba(219,211,211,0.60); padding: 2.5rem 0; font-size: 0.82rem; }
+  #footer .sitename, #footer a { color: var(--paper); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+  #footer a:hover { color: var(--accent-alt); }
+  #footer .social-links { display: flex; justify-content: center; gap: 1.2rem; margin: 1rem 0; }
+  #footer .social-links a { color: rgba(219,211,211,0.55); font-size: 1rem; transition: color 0.2s, transform 0.2s; }
+  #footer .social-links a:hover { color: var(--accent-alt); transform: translateY(-3px); }
+  #footer .credits { color: rgba(219,211,211,0.35); margin-top: 0.5rem; }
+
+  #scroll-top {
+    background: var(--gold); color: var(--paper); width: 42px; height: 42px;
+    border-radius: 0; bottom: 2rem; right: 2rem;
+    box-shadow: 4px 4px 0 var(--ink); transition: transform 0.2s, box-shadow 0.2s;
+  }
+  #scroll-top:hover { transform: translateY(-3px); box-shadow: 4px 7px 0 var(--ink); }
+
+  @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 991px) { .howto-steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 767px) {
+    .cert-grid { grid-template-columns: 1fr 1fr; }
+    .stats-row { grid-template-columns: 1fr; }
+    .stat-cell { border-right: none; border-bottom: 1px solid var(--line); }
+    .stat-cell:last-child { border-bottom: none; }
+    .drive-banner-inner { flex-direction: column; align-items: flex-start; }
+    .drive-btn { width: 100%; justify-content: center; }
+    .header-container { padding: 0 1.25rem; }
+    .howto-strip { padding: 1.75rem 1.25rem; }
+    .howto-steps { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .cert-section { padding: 4rem 0 5rem; }
+  }
+  @media (max-width: 480px) {
+    .cert-grid { grid-template-columns: 1fr; }
+    .howto-steps { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+
+<body class="index-page">
+
+<header id="header" class="header d-flex align-items-center sticky-top">
+  <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <h1 class="sitename">Guillermo Gaviola</h1>
+    </a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="credentials.html">Credentials</a></li>
+        <li><a href="certifications.html" class="active">Certifications</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+    <div class="header-social-links">
+      <a href="https://x.com/lapisramen" class="twitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.facebook.com/391038582193O467" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/mnbvcxz00frw" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/guillermogaviola0/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
+  <!-- Page Banner -->
+  <div class="page-banner">
+    <div class="container">
+      <div class="banner-eyebrow">Portfolio</div>
+      <h1>My <span>Certifications</span></h1>
+      <p class="banner-sub">Official certificates earned from trainings, seminars, and programs.</p>
+    </div>
+  </div>
+
+  <!-- Drive Banner -->
+  <div class="drive-banner">
+    <div class="container">
+      <div class="drive-banner-inner">
+        <div class="drive-left">
+          <div class="drive-icon"><i class="bi bi-google"></i></div>
+          <div>
+            <div class="drive-label">Google Drive</div>
+            <h3>All certificates are stored on Google Drive</h3>
+          </div>
+        </div>
+        <a href="https://drive.google.com/drive/folders/1tc3Bor6BYx0uQxO2yWMt-25vGv1JBDdf?usp=drive_link" target="_blank" class="drive-btn">
+          <i class="bi bi-folder2-open"></i> Browse All Certificates
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Section -->
+  <section class="cert-section">
+    <div class="container">
+
+      <!-- Stats -->
+<!--       <div class="stats-row">
+        <div class="stat-cell">
+          <span class="stat-number" id="totalCount">0</span>
+          <div class="stat-label">Total Certificates</div>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-number" id="govCount">0</span>
+          <div class="stat-label">Government / Civil Service</div>
+        </div>
+        <div class="stat-cell">
+          <span class="stat-number" id="ictCount">0</span>
+          <div class="stat-label">ICT / Technical</div>
+        </div>
+      </div> -->
+
+      <!-- Filter -->
+<!--       <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="gov">Government</button>
+        <button class="filter-btn" data-filter="ict">ICT / Tech</button>
+        <button class="filter-btn" data-filter="civil">Civil Service</button>
+        <button class="filter-btn" data-filter="civic">Civic / Community</button>
+      </div> -->
+
+      <!-- Block Header -->
+<!--       <div class="block-header">
+        <div class="block-icon"><i class="bi bi-award-fill"></i></div>
+        <div>
+          <div class="block-eyebrow">Official Certificates</div>
+          <h2>Certifications Earned</h2>
+        </div>
+      </div> -->
+
+      <!--
+      ═══════════════════════════════════════════════════════
+      HOW TO ADD A CERTIFICATE CARD
+      ───────────────────────────────────────────────────────
+      1. Upload file to your Google Drive folder
+      2. Right-click → "Get link" → "Anyone with the link" → Copy
+      3. Copy one .cert-card block below
+      4. Paste it inside #certGrid BEFORE the placeholder
+      5. Replace href with your copied Drive link
+      6. Set data-category: gov | ict | civil | civic
+      7. Set ribbon class to match category:
+         gov   → .cert-ribbon.gov   (blue)
+         ict   → .cert-ribbon.ict   (orange/red)
+         civil → .cert-ribbon.civil (green)
+         civic → .cert-ribbon.civic (purple)
+      8. Update title, issuer, and date
+      ═══════════════════════════════════════════════════════
+      -->
+
+      <div class="cert-grid" id="certGrid">
+
+        <!-- SAMPLE CARD 1 – replace href with your real Google Drive file link -->
+<!--         <a href="https://drive.google.com/drive/folders/1tc3Bor6BYx0uQxO2yWMt-25vGv1JBDdf?usp=drive_link"
+           target="_blank" class="cert-card" data-category="gov">
+          <div class="cert-card-bar"></div>
+          <div class="cert-preview">
+            <div class="cert-preview-bg"></div>
+            <span class="cert-ribbon gov">Government</span>
+            <div class="cert-preview-seal">
+              <div class="seal-ring"><i class="bi bi-award"></i></div>
+              <span class="seal-label">Certificate</span>
+            </div>
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-title">Add Certificate Title Here</div>
+            <div class="cert-issuer">Issuing Government Agency or Organization</div>
+            <div class="cert-footer">
+              <span class="cert-date"><i class="bi bi-calendar3"></i> Month Year</span>
+              <span class="cert-open-btn"><i class="bi bi-box-arrow-up-right"></i> Open</span>
+            </div>
+          </div>
+        </a> -->
+
+        <!-- SAMPLE CARD 2 -->
+<!--         <a href="https://drive.google.com/drive/folders/1tc3Bor6BYx0uQxO2yWMt-25vGv1JBDdf?usp=drive_link"
+           target="_blank" class="cert-card" data-category="ict">
+          <div class="cert-card-bar"></div>
+          <div class="cert-preview">
+            <div class="cert-preview-bg"></div>
+            <span class="cert-ribbon ict">ICT / Tech</span>
+            <div class="cert-preview-seal">
+              <div class="seal-ring"><i class="bi bi-cpu"></i></div>
+              <span class="seal-label">Certificate</span>
+            </div>
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-title">Add Certificate Title Here</div>
+            <div class="cert-issuer">Issuing Organization or Platform</div>
+            <div class="cert-footer">
+              <span class="cert-date"><i class="bi bi-calendar3"></i> Month Year</span>
+              <span class="cert-open-btn"><i class="bi bi-box-arrow-up-right"></i> Open</span>
+            </div>
+          </div>
+        </a> -->
+
+        <!-- SAMPLE CARD 3 -->
+<!--         <a href="https://drive.google.com/drive/folders/1tc3Bor6BYx0uQxO2yWMt-25vGv1JBDdf?usp=drive_link"
+           target="_blank" class="cert-card" data-category="civil">
+          <div class="cert-card-bar"></div>
+          <div class="cert-preview">
+            <div class="cert-preview-bg"></div>
+            <span class="cert-ribbon civil">Civil Service</span>
+            <div class="cert-preview-seal">
+              <div class="seal-ring"><i class="bi bi-building"></i></div>
+              <span class="seal-label">Certificate</span>
+            </div>
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-title">Add Certificate Title Here</div>
+            <div class="cert-issuer">Civil Service Commission / Agency</div>
+            <div class="cert-footer">
+              <span class="cert-date"><i class="bi bi-calendar3"></i> Month Year</span>
+              <span class="cert-open-btn"><i class="bi bi-box-arrow-up-right"></i> Open</span>
+            </div>
+          </div>
+        </a> -->
+
+        <!-- SAMPLE CARD 4 -->
+<!--         <a href="https://drive.google.com/drive/folders/1tc3Bor6BYx0uQxO2yWMt-25vGv1JBDdf?usp=drive_link"
+           target="_blank" class="cert-card" data-category="civic">
+          <div class="cert-card-bar"></div>
+          <div class="cert-preview">
+            <div class="cert-preview-bg"></div>
+            <span class="cert-ribbon civic">Civic</span>
+            <div class="cert-preview-seal">
+              <div class="seal-ring"><i class="bi bi-people"></i></div>
+              <span class="seal-label">Certificate</span>
+            </div>
+          </div>
+          <div class="cert-card-body">
+            <div class="cert-title">Add Certificate Title Here</div>
+            <div class="cert-issuer">Community Organization / LGU Program</div>
+            <div class="cert-footer">
+              <span class="cert-date"><i class="bi bi-calendar3"></i> Month Year</span>
+              <span class="cert-open-btn"><i class="bi bi-box-arrow-up-right"></i> Open</span>
+            </div>
+          </div>
+        </a> -->
+
+        <!-- ADD MORE CARDS ABOVE THIS LINE -->
+
+        <!-- Placeholder -->
+<!--         <div class="cert-placeholder">
+          <i class="bi bi-plus-circle"></i>
+          <strong>More to be added</strong>
+          <p>Copy a card above, paste your Google Drive file link, and update the details.</p>
+        </div> -->
+
+      </div>
+
+      <div class="section-sep"><div class="sep-diamond"></div></div>
+
+      <!-- How-to Guide -->
+<!--       <div class="howto-strip">
+        <div class="howto-header">
+          <i class="bi bi-info-circle-fill"></i>
+          <span>How to add a new certificate to this page</span>
+        </div>
+        <div class="howto-steps">
+          <div class="howto-step">
+            <div class="howto-num">01</div>
+            <div class="howto-title">Upload to Drive</div>
+            <div class="howto-desc">Save your certificate to the Google Drive folder linked in the banner above.</div>
+          </div>
+          <div class="howto-step">
+            <div class="howto-num">02</div>
+            <div class="howto-title">Get the Link</div>
+            <div class="howto-desc">Right-click the file → "Get link" → set to "Anyone with the link" → Copy.</div>
+          </div>
+          <div class="howto-step">
+            <div class="howto-num">03</div>
+            <div class="howto-title">Copy a Card</div>
+            <div class="howto-desc">Duplicate any <code>.cert-card</code> block and paste it inside <code>#certGrid</code>.</div>
+          </div>
+          <div class="howto-step">
+            <div class="howto-num">04</div>
+            <div class="howto-title">Fill in Details</div>
+            <div class="howto-desc">Replace <code>href</code>, title, issuer, date, and set <code>data-category</code> + ribbon class.</div>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+  </section>
+
+</main>
+
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="copyright text-center">
+      <p>&copy; <span id="current-year"></span> <a href="https://linktr.ee/guillermogaviola" target="_blank" class="px-1 sitename">Guillermo Gaviola</a>. All Rights Reserved</p>
+    </div>
+    <div class="social-links d-flex justify-content-center">
+      <a href="https://x.com/lapisramen" target="_blank"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.facebook.com/391038582193O467" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/mnbvcxz00frw" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/guillermogaviola0/" target="_blank"><i class="bi bi-linkedin"></i></a>
+    </div>
+    <div class="credits text-center">
+      Designed and Developed by <a href="https://linktr.ee/guillermogaviola" target="_blank">Guillermo Gaviola</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+
+  function updateStats() {
+    const cards = document.querySelectorAll('#certGrid .cert-card');
+    let gov = 0, ict = 0;
+    cards.forEach(c => {
+      if (c.dataset.category === 'gov' || c.dataset.category === 'civil') gov++;
+      if (c.dataset.category === 'ict') ict++;
+    });
+    document.getElementById('totalCount').textContent = cards.length;
+    document.getElementById('govCount').textContent   = gov;
+    document.getElementById('ictCount').textContent   = ict;
+  }
+
+  updateStats();
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('#certGrid .cert-card').forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'flex' : 'none';
+      });
+    });
+  });
+</script>
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
